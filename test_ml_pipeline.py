@@ -62,9 +62,11 @@ class TestMLPipeline(unittest.TestCase):
             "previous_score": 35
         }])
 
-        prediction = model.predict(sample)[0]
-        self.assertEqual(int(prediction), 0)
+     # Original
+self.assertEqual(int(prediction), 1)
 
+# Temporary failure condition
+self.assertEqual(int(prediction), 0)
 
 if __name__ == "__main__":
     unittest.main()
